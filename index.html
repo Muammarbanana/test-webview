@@ -25,11 +25,13 @@
     <script type="text/javascript">
         var _selector = document.querySelector('input[name=myCheckbox]');
         _selector.addEventListener('change', function(event) {
+            var channel = 'kakiKucing'
             var message = (_selector.checked) ? "Toggle Switch is on" : "Toggle Switch is off";
     
-            if (kakiKucing) {
-                kakiKucing.postMessage(message);
-            }
+            // if (kakiKucing) {
+            //     kakiKucing.postMessage(message);
+            // }
+            window.channel.postMessage(message);
             });
     </script>
 </html>
